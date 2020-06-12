@@ -29,7 +29,7 @@ app.layout = html.Div([dcc.RadioItems(id="gender1", options=[{'label': 'Female',
 @app.callback(Output('fig1', 'figure'),[Input('gender1', 'value')])
 def updateGender(g):    return  px.scatter(tips.query("sex=='"+g+"'"), x="total_bill", y="tip")
 if __name__ == '__main__': 
-    app.server.run(debug=True, use_reloader=False) # Run the Dash app
+ #   app.server.run(debug=True, use_reloader=False) # Run the Dash app
     
     
 # File2: requirements.txt
